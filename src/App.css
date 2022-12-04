@@ -1,38 +1,38 @@
+:root {
+  --lblue: #47e6ff;
+  --orange: #ff7b47;
+  --green: #6ba368;
+  --yellow: #ffd166;
+  --dblue: #26547c;
+  --jet: #2f2f2f;
+  --charcoal: #424651;
+  --catawba: #773344;
+  /* --eggplant: #75485e; */
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading {
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  top: calc(100vh / 2 - 100px);
+  left: calc(100vw / 2 - 100px);
+  animation: spin 0.75s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+@keyframes spin {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-cc {
+  100% {
+    transform: rotate(-360deg);
   }
 }

@@ -1,0 +1,16 @@
+.mouse {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* background: rgb(36, 36, 36); */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.mouse-img {
+    height: 70vh;
+    width: auto;
+    margin: 0 20px;
+    border-radius: 20px;
+}
+

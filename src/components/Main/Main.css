@@ -1,0 +1,261 @@
+/* .parent {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(8, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&family=Black+Han+Sans&family=Fredoka+One&family=Lemon&family=Lilita+One&family=Passion+One&family=Questrial&family=Righteous&family=RocknRoll+One&family=Rubik+Iso&family=Secular+One&family=Shrikhand&family=Signika+Negative:wght@300&family=Titan+One&family=Ultra&family=Zilla+Slab:wght@300&display=swap');
+
+:root {
+  --alexandria: 'Alexandria', sans-serif;
+  --blackhan: 'Black Han Sans', sans-serif;
+  --fredoka: 'Fredoka One', cursive;
+  --lemon: 'Lemon', cursive;
+  --lilita: 'Lilita One', cursive;
+  --passion: 'Passion One', cursive;
+  --quest: 'Questrial', sans-serif;
+  --righteous: 'Righteous', cursive;
+  --rock: 'RocknRoll One', sans-serif;
+  --rubik: 'Rubik Iso', cursive;
+  --secular: 'Secular One', sans-serif;
+  --shrike: 'Shrikhand', cursive;
+  --neg: 'Signika Negative', sans-serif;
+  --titan: 'Titan One', cursive;
+  --ultra: 'Ultra', serif;
+  --zilla: 'Zilla Slab', serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  color: white;
+}
+
+.headshot {
+  height: 200px;
+  width: auto;
+  border-radius: 50px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 10vw;
+  height: auto;
+}
+
+/*      this is the basic 8x8 grid with headshot, icons, and text       */
+
+/* .parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: #3a3a3a;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6,
+.div7,
+.div8,
+.div9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div1 {
+  grid-area: 2 / 2 / 4 / 4;
+  background-color: var(--dblue);
+}
+
+.div2 {
+  grid-area: 4 / 2 / 5 / 4;
+  background-color: var(--);
+}
+.div3 {
+  grid-area: 2 / 4 / 3 / 6;
+  background-color: orangered;
+  display: flex;
+  flex-direction: column;
+}
+.div4 {
+  grid-area: 3 / 4 / 4 / 6;
+  background-color: red;
+}
+.div5 {
+  grid-area: 4 / 4 / 5 / 5;
+  background-color: green;
+}
+.div6 {
+  grid-area: 5 / 4 / 6 / 5;
+  background-color: lightgreen;
+}
+.div7 {
+  grid-area: 4 / 5 / 5 / 6;
+  background-color: lightblue;
+}
+.div8 {
+  grid-area: 5 / 5 / 6 / 6;
+  background-color: blue;
+}
+.div9 {
+  grid-area: 5 / 2 / 6 / 4;
+  background-color: violet;
+} */
+
+/*      this is the experimental new grid       */
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  background-color: #3a3a3a;
+  padding: 10px;
+  /* border: 2px dotted white; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.mouse-main {
+  height: 150px;
+  width: auto;
+  border-radius: 20px;
+  display: flex;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* padding: 2px; */
+  margin: 0 auto;
+  position: relative;
+  right: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 3px solid var(--lblue);
+  right: 0;
+}
+
+.mousecode {
+  position: relative;
+  left: 10px;
+  padding-right: 7px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.hi {
+  font-size: 2.5rem;
+}
+
+.div1 {
+  grid-area: 2 / 3 / 4 / 7;
+  background-color: var(--dblue);
+  color: var(-yellow);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.div2 {
+  grid-area: 4 / 3 / 6 / 7;
+  background-color: var(--lblue);
+  color: var(-orange);
+}
+.div3 {
+  grid-area: 6 / 3 / 8 / 7;
+  background-color: var(--dblue);
+  color: var(-yellow);
+}
+.div4 {
+  grid-area: 2 / 3 / 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+.div5 {
+  grid-area: 4 / 5 / 6 / 7;
+}
+.div6 {
+  grid-area: 6 / 3 / 8 / 5;
+}
+.div7 {
+  grid-area: 2 / 5 / 3 / 7;
+}
+.div8 {
+  grid-area: 3 / 5 / 4 / 7;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.creative {
+  font-size: 1.1rem;
+  margin: 5px;
+}
+
+.div9 {
+  grid-area: 4 / 3 / 5 / 5;
+}
+.div10 {
+  grid-area: 5 / 3 / 6 / 5;
+  display: flex;
+}
+.div11 {
+  grid-area: 6 / 5 / 7 / 7;
+}
+.div12 {
+  grid-area: 7 / 5 / 8 / 7;
+}
+.div13 {
+  grid-area: 8 / 3 / 9 / 7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--orange);
+}
+.div14 {
+  grid-area: 8 / 3 / 9 / 4;
+  background-color: var(--orange);
+  border-bottom-left-radius: 15px;
+}
+.div15 {
+  grid-area: 8 / 4 / 9 / 5;
+  background-color: var(--green);
+}
+.div16 {
+  grid-area: 8 / 5 / 9 / 6;
+  background-color: var(--yellow);
+}
+.div17 {
+  grid-area: 8 / 6 / 9 / 7;
+  background-color: var(--catawba);
+  border-bottom-right-radius: 15px;
+}
+
+.div14,
+.div15,
+.div16 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
