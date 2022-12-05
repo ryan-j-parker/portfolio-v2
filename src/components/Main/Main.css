@@ -152,7 +152,8 @@ grid-row-gap: 0px;
   position: relative;
   left: 10px;
   padding-right: 7px;
-  top: 50%;
+  padding-left: 8px;
+  top: 40%;
   transform: translate(0, -50%);
 }
 

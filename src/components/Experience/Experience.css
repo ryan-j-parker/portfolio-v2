@@ -1,0 +1,36 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Canvas {
+  background-color: rgba(0, 0, 0, 0.99);
+} */
+
+.label > div {
+  font-size: 3rem;
+  background: #ff349688;
+  border-radius: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: var(--blackhan);
+  color: rgb(255, 255, 193);
+  padding: 10px;
+  z-index: -1;
+}
+
+.scene {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
