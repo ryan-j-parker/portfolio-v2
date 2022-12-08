@@ -3,7 +3,6 @@ import { Html, PivotControls } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 
-
 export default function Sphere() {
   const ref = useRef();
 
@@ -24,8 +23,14 @@ export default function Sphere() {
         <mesh castShadow ref={ref} scale={[1, 1, 1]} position={[0, -1, 2]}>
           <sphereGeometry />
           <meshLambertMaterial color="0xfda23c" />
-          <Html position={[1, 1, 0]} wrapperClass="label" center distanceFactor={6} occlude={ref}>
-            Texty westerson
+          <Html
+            position={[1, 1, 0]}
+            wrapperClass="label"
+            center
+            distanceFactor={6}
+            occlude={ref}
+          >
+            I&apos;m a string in orbit around a sphere
           </Html>
         </mesh>
       </PivotControls>

@@ -6,6 +6,7 @@ import Mouse from './components/Mouse/Mouse';
 import { Routes, Route } from 'react-router-dom';
 import { Scene } from 'three';
 import Experience from './components/Experience/Experience';
+import AltScene from './components/Experience/AltScene';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/scene" element={<Experience />} />
+          <Route path="/alt" element={<AltScene />} />
           <Route path="/mouse" element={<Mouse />} />
           <Route path="/" element={<Main />} />
         </Routes>

@@ -7,14 +7,15 @@ body,
   padding: 0;
 }
 
-/* Canvas {
-  background-color: rgba(0, 0, 0, 0.99);
-} */
+Canvas {
+  /* background-color: rgba(0, 0, 0, 0.99); */
+  background: transparent;
+}
 
 .label > div {
   font-size: 3rem;
   background: #ff349688;
-  border-radius: 1rem;
+  border-radius: 2rem;
   overflow: hidden;
   white-space: nowrap;
   position: absolute;
@@ -22,7 +23,7 @@ body,
   -webkit-user-select: none;
   font-family: var(--blackhan);
   color: rgb(255, 255, 193);
-  padding: 10px;
+  padding: 25px;
   z-index: -1;
 }
 
