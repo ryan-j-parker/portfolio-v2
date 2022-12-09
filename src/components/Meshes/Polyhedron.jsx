@@ -8,6 +8,7 @@ export default function Polyhedron({ polyhedron, color, ...props }) {
 
   const [hovered, setHovered] = useState(false);
 
+  // eslint-disable-next-line no-console
   console.log(polyhedron[count].uuid);
 
   useFrame((state, delta) => {

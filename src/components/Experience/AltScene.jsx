@@ -6,6 +6,7 @@ import Collabo from '../Projects/Collabo';
 import * as THREE from 'three';
 import { useRef } from 'react';
 import { useState } from 'react';
+import SoundPalette from '../Projects/SoundPalette';
 
 export default function AltScene() {
   const camera = new THREE.PerspectiveCamera({
@@ -44,13 +45,14 @@ export default function AltScene() {
         >
           <Environment background files={'./environmentMaps/firesky.hdr'}>
             <color args={['#000000']} attach="background" />
-            <Lightformer position-z={-1} scale={4} color="gold" intensity={10} form="ring" />
+            <Lightformer position-z={-1} scale={4} color="gold" intensity={5} form="ring" />
           </Environment>
           <Collabo 
             onWheel={(e) => setScrolled(true)} 
             // ref={meshRef} 
             position={[0, -2, -4]} 
           />
+          <SoundPalette position={[4, 2, 0]} />
           <TrackballControls makeDefault minDistance={0} maxDistance={20} />
         </Canvas>
       </div>
