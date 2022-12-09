@@ -13,7 +13,7 @@ export default function CustomObject() {
       positions[i] = (Math.random() - 0.5) * 3;
     }
     return positions;
-  }, []);
+  }, [verticesCount]);
 
   useEffect(() => {
     geometryRef.current.computeVertexNormals();
