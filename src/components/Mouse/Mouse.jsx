@@ -4,18 +4,18 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 
 export default function Mouse() {
   const slides = [
-    { url: 'http://localhost:3000/mouse/mouse1.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse2.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse3.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse4.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse5.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse6.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse7.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse8.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse9.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse10.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse11.jpg', title: 'Mouse' },
-    { url: 'http://localhost:3000/mouse/mouse12.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse1.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse2.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse3.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse4.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse5.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse6.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse7.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse8.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse9.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse10.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse11.jpg', title: 'Mouse' },
+    { url: '/mouse/mouse12.jpg', title: 'Mouse' },
   ];
 
   const containerStyles = {

@@ -15,20 +15,10 @@ import { Environment, Lightformer, OrbitControls, Sky, Stats } from '@react-thre
 import { useControls } from 'leva';
 import Collabo from '../Projects/Collabo';
 import SoundPalette from '../Projects/SoundPalette';
-
-function Sun() {
-  const sunRef = useRef();
-
-  return (
-    <>
-      <mesh ref={sunRef} scale={[4, 4, 4]} position={[-45, 123, -42]}>
-        <spotLight intensity={8} castShadow color="#fff0da" />
-        <meshStandardMaterial />
-        <sphereGeometry />
-      </mesh>
-    </>
-  );
-}
+import { useEffect } from 'react';
+import Sun from '../Meshes/Sun';
+import Torus from '../Meshes/Torus';
+import Orbital from '../Meshes/Orbital';
 
 export default function Experience() {
   const polyhedron = useMemo(
@@ -132,6 +122,10 @@ export default function Experience() {
         <Collabo position={[-2, 1, -4]} />
         <SoundPalette position={[-12, 4, -2]} />
         {/* <Sun /> */}
+        <Torus position={[6, 7, 14]}>
+          <Orbital />
+        </Torus>
+        <Orbital />
         <Polyhedron
           position={[-12, 1, 0]}
           rotation={[pA.x, pA.y, pA.z]}
