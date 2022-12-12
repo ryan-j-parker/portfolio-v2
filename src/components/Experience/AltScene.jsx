@@ -7,6 +7,7 @@ import * as THREE from 'three';
 import { useRef } from 'react';
 import { useState } from 'react';
 import SoundPalette from '../Projects/SoundPalette';
+import MouseMesh from '../Meshes/MouseMesh';
 
 export default function AltScene() {
   const camera = new THREE.PerspectiveCamera({
@@ -50,9 +51,10 @@ export default function AltScene() {
           <Collabo 
             onWheel={(e) => setScrolled(true)} 
             // ref={meshRef} 
-            position={[0, -2, -4]} 
+            position={[-1, -2, -18]} 
           />
-          <SoundPalette position={[4, 2, 0]} />
+          <SoundPalette position={[6, 1.5, -16]} />
+          <MouseMesh position={[-8.5, -9.5, -24]} rotation-x={-0.4} rotation-y={0.6}/>
           <TrackballControls makeDefault minDistance={0} maxDistance={20} />
         </Canvas>
       </div>

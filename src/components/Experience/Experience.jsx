@@ -122,10 +122,9 @@ export default function Experience() {
         <Collabo position={[-2, 1, -4]} />
         <SoundPalette position={[-12, 4, -2]} />
         {/* <Sun /> */}
-        <Torus position={[6, 7, 14]}>
+        {/* <Torus position={[6, 7, 14]}>
           <Orbital />
-        </Torus>
-        <Orbital />
+        </Torus> */}
         <Polyhedron
           position={[-12, 1, 0]}
           rotation={[pA.x, pA.y, pA.z]}
