@@ -277,7 +277,8 @@ h3 {
 }
 
 .scene-btn,
-.alt-btn {
+.alt-btn,
+.mouse-btn {
   font-size: 1.2rem;
   border-radius: 10px;
   color: orangered;
@@ -290,13 +291,15 @@ h3 {
 }
 
 .scene-btn:hover,
-.alt-btn:hover {
+.alt-btn:hover,
+.mouse-btn:hover {
   cursor: pointer;
   opacity: 90%;
 }
 
 .scene-btn:active,
-.alt-btn:active {
+.alt-btn:active,
+.mouse-btn:active {
   transform: scale(0.95);
 }
 
@@ -306,4 +309,8 @@ h3 {
 
 .alt-btn {
   bottom: 70px;
+}
+
+.mouse-btn {
+  bottom: 110px;
 }

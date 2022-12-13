@@ -65,6 +65,9 @@ export default function Main() {
           </div>
         </div>
       </div>
+      <a href="/mouse">
+        <button className="mouse-btn">to Mouse gallery</button>
+      </a>
       <a href="/scene">
         <button className="scene-btn">to 3d sandbox</button>
       </a>
