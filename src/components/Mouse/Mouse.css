@@ -14,3 +14,7 @@
     border-radius: 20px;
 }
 
+.mouse-img:hover {
+    scale: 1.02;
+    border-radius: 30px;
+}
