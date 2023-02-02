@@ -16,6 +16,10 @@ html {
   background-size: cover;
 }
 
+.slides:active {
+  background-color: rgb(255, 25, 160);
+}
+
 .dotContainer {
   display: flex;
   justify-content: center;
@@ -34,6 +38,7 @@ html {
 
 .dots:active {
   transform: scale(1.2);
+  color: rgb(255, 25, 160);
 }
 
 .leftArrow,

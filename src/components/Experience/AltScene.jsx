@@ -1,7 +1,13 @@
 /* eslint-disable react/no-unknown-property */
-import { Environment, Lightformer, OrbitControls, TrackballControls } from '@react-three/drei';
+import {
+  Environment,
+  Lightformer,
+  Loader,
+  OrbitControls,
+  TrackballControls,
+} from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
-import React from 'react';
+import React, { Suspense } from 'react';
 import Collabo from '../Projects/Collabo';
 import * as THREE from 'three';
 import { useRef } from 'react';
@@ -17,17 +23,17 @@ export default function AltScene() {
     far: 10,
   });
 
-//   const meshRef = useRef();
+  //   const meshRef = useRef();
 
   const [scrolled, setScrolled] = useState(false);
 
-//   useFrame(() => {
-//     scrolled ? (meshRef.current.position.y += 1) : (meshRef.current.position.y -= 1);
-//   });
+  //   useFrame(() => {
+  //     scrolled ? (meshRef.current.position.y += 1) : (meshRef.current.position.y -= 1);
+  //   });
 
   return (
     <>
-      <div className="alt-scene">
+      <Suspense fallback={<Loader />}>
         <Canvas
           shadows
           dpr={[1, 3]}
@@ -48,16 +54,16 @@ export default function AltScene() {
             <color args={['#000000']} attach="background" />
             <Lightformer position-z={-1} scale={4} color="gold" intensity={5} form="ring" />
           </Environment>
-          <Collabo 
-            onWheel={(e) => setScrolled(true)} 
-            // ref={meshRef} 
-            position={[-1, -2, -18]} 
+          <Collabo
+            onWheel={(e) => setScrolled(true)}
+            // ref={meshRef}
+            position={[-1, -2, -18]}
           />
           <SoundPalette position={[6, 1.5, -16]} />
-          <MouseMesh position={[-8.5, -9.5, -24]} rotation-x={-0.4} rotation-y={0.6}/>
+          <MouseMesh position={[-8.5, -9.5, -24]} rotation-x={-0.4} rotation-y={0.6} />
           <TrackballControls makeDefault minDistance={0} maxDistance={20} />
         </Canvas>
-      </div>
+      </Suspense>
     </>
   );
 }

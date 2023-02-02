@@ -1,9 +1,11 @@
 import React from 'react';
+import Liquid from '../../Liquid';
 import './Main.css';
 
 export default function Main() {
   return (
     <>
+      {/* <Liquid /> */}
       <div className="main">
         {/*  this is the original 8x8 grid  */}
         {/* <div className="parent">
@@ -51,7 +53,7 @@ export default function Main() {
           </div>
           <div className="div10">10</div>
           <div className="div11">11</div>
-          <div className="div12">12</div>
+          <div className="div12"></div>
           <div className="div13">
             <a href="http://github.com/ryan-j-parker" target="_blank" rel="noreferrer">
               <img src="/github-icon-white.png" className="icon" />

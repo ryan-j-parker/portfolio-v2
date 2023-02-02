@@ -3,7 +3,7 @@ import * as THREE from 'three';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // extend({ OrbitControls });
 import { Canvas } from '@react-three/fiber';
-import React, { useRef } from 'react';
+import React, { Suspense, useRef } from 'react';
 import './Experience.css';
 import LavaField from '../Meshes/LavaField';
 import Sphere from '../Meshes/Sphere';
@@ -11,7 +11,7 @@ import Box from '../Meshes/Box';
 import CustomObject from '../Meshes/CustomObject';
 import Polyhedron from '../Meshes/Polyhedron';
 import { useMemo } from 'react';
-import { Environment, Lightformer, OrbitControls, Sky, Stats } from '@react-three/drei';
+import { Environment, Lightformer, Loader, OrbitControls, Sky, Stats } from '@react-three/drei';
 import { useControls } from 'leva';
 import Collabo from '../Projects/Collabo';
 import SoundPalette from '../Projects/SoundPalette';
@@ -79,80 +79,81 @@ export default function Experience() {
 
   return (
     <>
-      <Canvas
-        // onCreated={created}
-        // shadows={false}
-        shadows
-        dpr={[1, 2]}
-        gl={{
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          outputEncoding: THREE.sRGBEncoding,
-        }}
-        style={{ height: '100vh', width: '100vw' }}
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 800,
-          position: [-5, 2, 28],
-        }}
-      >
-        <Environment
-          background
-          // files={'./environmentMaps/puresky.hdr'}
-          files={'./environmentMaps/firesky.hdr'}
-          // preset="warehouse"
-          // files={'./environmentMaps/the_sky_is_on_fire_2k.hdr'}
-          // files={[
-          //   './environmentMaps/2/px.jpg',
-          //   './environmentMaps/2/nx.jpg',
-          //   './environmentMaps/2/py.jpg',
-          //   './environmentMaps/2/ny.jpg',
-          //   './environmentMaps/2/pz.jpg',
-          //   './environmentMaps/2/nz.jpg',
-          // ]}
+      <Suspense fallback={<Loader />}>
+        <Canvas
+          // onCreated={created}
+          // shadows={false}
+          shadows
+          dpr={[1, 2]}
+          gl={{
+            antialias: true,
+            toneMapping: THREE.ACESFilmicToneMapping,
+            outputEncoding: THREE.sRGBEncoding,
+          }}
+          style={{ height: '100vh', width: '100vw' }}
+          camera={{
+            fov: 45,
+            near: 0.1,
+            far: 800,
+            position: [-5, 2, 28],
+          }}
         >
-          <color args={['#000000']} attach="background" />
-          <Lightformer position-z={-1} scale={5} color="white" intensity={10} form="ring" />
-          {/* <mesh position-z={-5} scale={10}>
+          <Environment
+            background
+            // files={'./environmentMaps/puresky.hdr'}
+            files={'./environmentMaps/firesky.hdr'}
+            // preset="warehouse"
+            // files={'./environmentMaps/the_sky_is_on_fire_2k.hdr'}
+            // files={[
+            //   './environmentMaps/2/px.jpg',
+            //   './environmentMaps/2/nx.jpg',
+            //   './environmentMaps/2/py.jpg',
+            //   './environmentMaps/2/ny.jpg',
+            //   './environmentMaps/2/pz.jpg',
+            //   './environmentMaps/2/nz.jpg',
+            // ]}
+          >
+            <color args={['#000000']} attach="background" />
+            <Lightformer position-z={-1} scale={5} color="white" intensity={10} form="ring" />
+            {/* <mesh position-z={-5} scale={10}>
             <planeGeometry />
             <meshBasicMaterial color={[10, 0, 0]} />
           </mesh> */}
-        </Environment>
-        <Collabo position={[-2, 1, -4]} />
-        <SoundPalette position={[-12, 4, -2]} />
-        {/* <Sun /> */}
-        {/* <Torus position={[6, 7, 14]}>
+          </Environment>
+          <Collabo position={[-2, 1, -4]} />
+          <SoundPalette position={[-12, 4, -2]} />
+          {/* <Sun /> */}
+          {/* <Torus position={[6, 7, 14]}>
           <Orbital />
         </Torus> */}
-        <Polyhedron
-          position={[-12, 1, 0]}
-          rotation={[pA.x, pA.y, pA.z]}
-          visible={pA.visible}
-          color={pA.color}
-          polyhedron={polyhedron}
-          envMapIntensity={envMapIntensity}
-        ></Polyhedron>
-        <Polyhedron
-          position={[-10, 1, 0]}
-          rotation={[pB.x, pB.y, pB.z]}
-          visible={pB.visible}
-          color={pB.color}
-          polyhedron={polyhedron}
-          envMapIntensity={envMapIntensity}
-        ></Polyhedron>
-        {/* <OrbitControls args={[camera, gl.domElement]} /> */}
-        <OrbitControls makeDefault />
-        <Stats />
-        {/* <CameraController /> */}
-        <Sphere position={[2, 2, -2]} envMapIntensity={envMapIntensity} />
-        <Box position={[10, 4, 6]} envMapIntensity={envMapIntensity} />
-        <LavaField envMapIntensity={envMapIntensity} />
-        {/* <CustomObject envMapIntensity={envMapIntensity} /> */}
-        {/* <ambientLight intensity={0.7} /> */}
-        {/* <Sky sunPosition={sunPosition} /> */}
+          <Polyhedron
+            position={[-12, 1, 0]}
+            rotation={[pA.x, pA.y, pA.z]}
+            visible={pA.visible}
+            color={pA.color}
+            polyhedron={polyhedron}
+            envMapIntensity={envMapIntensity}
+          ></Polyhedron>
+          <Polyhedron
+            position={[-10, 1, 0]}
+            rotation={[pB.x, pB.y, pB.z]}
+            visible={pB.visible}
+            color={pB.color}
+            polyhedron={polyhedron}
+            envMapIntensity={envMapIntensity}
+          ></Polyhedron>
+          {/* <OrbitControls args={[camera, gl.domElement]} /> */}
+          <OrbitControls makeDefault />
+          <Stats />
+          {/* <CameraController /> */}
+          <Sphere position={[2, 2, -2]} envMapIntensity={envMapIntensity} />
+          <Box position={[10, 4, 6]} envMapIntensity={envMapIntensity} />
+          <LavaField envMapIntensity={envMapIntensity} />
+          {/* <CustomObject envMapIntensity={envMapIntensity} /> */}
+          {/* <ambientLight intensity={0.7} /> */}
+          {/* <Sky sunPosition={sunPosition} /> */}
 
-        {/* <directionalLight
+          {/* <directionalLight
           ref={directionalLight}
           position={sunPosition}
           intensity={2.5}
@@ -166,8 +167,9 @@ export default function Experience() {
           shadow-camera-left={-5}
         /> */}
 
-        {/* <directionalLight ref={directionalLight} position={sunPosition} castShadow /> */}
-      </Canvas>
+          {/* <directionalLight ref={directionalLight} position={sunPosition} castShadow /> */}
+        </Canvas>
+      </Suspense>
     </>
   );
 }
